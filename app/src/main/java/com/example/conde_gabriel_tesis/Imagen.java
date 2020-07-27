@@ -635,40 +635,50 @@ public class Imagen extends View {
                     int i = event.getActionIndex();//Recupera coordenada donde ocurrio el evento
                     destinoX = (int) event.getX(i);
                     destinoY = (int) event.getY(i);
-                    double x1, y1;
-                    x1 = (double) destinoX / divisionGridAncho;
-                    y1 = (double) destinoY / divisionGridAlto;
-                    x1 = Math.round(x1);
-                    y1 = Math.round(y1);
-                    destinoX = (int) ((x1 * divisionGridAncho) - (divisionGridAncho / 2));
-                    destinoY = (int) ((y1 * divisionGridAlto) - (divisionGridAlto / 2));
-                    if(posx!=0 && posy!=0){
-                        if (posx == destinoX && posy == destinoY) esFinal = true;
-                        else esFinal = false;
-                        if (!(imagen.getPixel((int) Math.round(posx), (int) Math.round(posy)) == Color.BLACK)) {
-                            RutaAlgoritmoA();
+                    if (!(imagen.getPixel((int) Math.round(destinoX), (int) Math.round(destinoY)) == Color.BLACK)) {
+                        double x1, y1;
+                        x1 = (double) destinoX / divisionGridAncho;
+                        y1 = (double) destinoY / divisionGridAlto;
+                        x1 = Math.round(x1);
+                        y1 = Math.round(y1);
+                        destinoX = (int) ((x1 * divisionGridAncho) - (divisionGridAncho / 2));
+                        destinoY = (int) ((y1 * divisionGridAlto) - (divisionGridAlto / 2));
+                        if(posx!=0 && posy!=0){
+                            if (posx == destinoX && posy == destinoY) esFinal = true;
+                            else esFinal = false;
+                            if (!(imagen.getPixel((int) Math.round(posx), (int) Math.round(posy)) == Color.BLACK)) {
+                                RutaAlgoritmoA();
+                            }
                         }
+                        DibujarDestino(destinoX, destinoY);
+                    }else{
+                        Toast.makeText(ctx, "Seleccione una celda válida", Toast.LENGTH_LONG).show();
                     }
-                    DibujarDestino(destinoX, destinoY);
                 } else {
                     if (destinoY != 0 && destinoX != 0) {
                         int i = event.getActionIndex();//Recupera coordenada donde ocurrio el evento
                         posx = event.getX(i);
                         posy = event.getY(i);
-                        invalidate();
-                        double x, y;
-                        x = posx / divisionGridAncho;
-                        y = posy / divisionGridAlto;
-                        x = Math.round(x);
-                        y = Math.round(y);
-                        posx = (float) ((x * divisionGridAncho) - (divisionGridAncho / 2));
-                        posy = (float) ((y * divisionGridAlto) - (divisionGridAlto / 2));
-                        if (posx == destinoX && posy == destinoY) esFinal = true;
-                        else esFinal = false;
                         if (!(imagen.getPixel((int) Math.round(posx), (int) Math.round(posy)) == Color.BLACK)) {
+                            invalidate();
+                            double x, y;
+                            x = posx / divisionGridAncho;
+                            y = posy / divisionGridAlto;
+                            x = Math.round(x);
+                            y = Math.round(y);
+                            posx = (float) ((x * divisionGridAncho) - (divisionGridAncho / 2));
+                            posy = (float) ((y * divisionGridAlto) - (divisionGridAlto / 2));
+                            if (posx == destinoX && posy == destinoY) esFinal = true;
+                            else esFinal = false;
                             RutaAlgoritmoA();
+                            DibujarDestino(destinoX, destinoY);
+                        }else{
+                            FinalizarVista();
+                            //posx=0;
+                            //posy=0;
+                            Toast.makeText(ctx, "Seleccione una celda válida", Toast.LENGTH_LONG).show();
                         }
-                        DibujarDestino(destinoX, destinoY);
+
                     } else {
                         Toast.makeText(ctx, "Seleccione un destino", Toast.LENGTH_LONG).show();
 
