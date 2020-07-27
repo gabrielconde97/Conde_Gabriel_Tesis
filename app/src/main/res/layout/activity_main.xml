@@ -1,0 +1,62 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="OPCIONES:"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnMostrarUbi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MostrarControlUbicacion"
+            android:text="Cargar Mapa"/>
+
+        <Button
+            android:id="@+id/btnMostrarMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MostrarControlMapa"
+            android:text="Crear Mapa"/>
+
+        <Button
+            android:id="@+id/btnEditarMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MostrarEditarMapa"
+            android:text="Editar Mapa"/>
+
+        <Button
+            android:id="@+id/btnEliminarMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MostrarEliminarMapa"
+            android:text="Eliminar Mapa"/>
+
+        <Button
+            android:id="@+id/btnAgregarBeacons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MostrarAgregarBeacon"
+            android:text="Agregar Beacons"/>
+        <Button
+            android:id="@+id/btnEliminarBeaconsA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MostrarEliminarBeacon"
+            android:text="Eliminar Beacons"/>
+
+
+    </LinearLayout>
+</ScrollView>

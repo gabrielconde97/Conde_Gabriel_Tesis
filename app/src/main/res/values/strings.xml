@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Conde_Gabriel_Tesis</string>
+    <string-array name="Dibujo">
+        <item>Obstaculo</item>
+        <item>Puerta</item>
+        <item>Escalera</item>
+        <item>Elevador</item>
+        <item>Punto a Considerar</item>
+        <item>Beacon</item>
+    </string-array>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnBuscarBeacons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="BuscarBeacons"
+            android:text="Buscar BEACONS" />
+
+        <Button
+            android:id="@+id/btnMostarBeacons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:onClick="MostrarBeacons"
+            android:text="MOSTRAR BEACONS" />
+
+        <Button
+            android:id="@+id/btnGuardarBeacons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:onClick="GuardarBeacons"
+            android:text="GUARDAR BEACONS" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UUIDS BEACONS:"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/etBeacons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+</ScrollView>

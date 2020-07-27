@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/lyMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.example.conde_gabriel_tesis.Plano
+                android:id="@+id/planoEditar"
+                android:layout_width="1000px"
+                android:layout_height="1200px"
+                android:layout_margin="10dp"
+                android:background="@color/Blanco" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCalibrarEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="CalibrarEditar"
+                android:text="Calibrar" />
+
+            <Button
+                android:id="@+id/btnGuardarPlanoEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ActualizarMapa"
+                android:text="Actualizar" />
+
+            <Button
+                android:id="@+id/btnMostrarMapas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="MostrarMapas"
+                android:text="MOSTRAR MAPAS" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtNombreImagenEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre Imagen" />
+
+        <LinearLayout
+            android:id="@+id/lySpinnerEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spOpcioneGraficosEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/spBeaconsEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txtAltoEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/White"
+                android:hint="Alto"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/txtAnchoEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/White"
+                android:hint="Ancho"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/txtMostrarEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/ivEditar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cursor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btnBeaconsActuales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:onClick="MostrarBeaconsActuales"
+                android:text="BEACONS ACTUALES" />
+            <Button
+                android:id="@+id/btnBeaconsEditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:onClick="MostrarBeaconsEditar"
+                android:text="BEACONS DISPONIBLES" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
